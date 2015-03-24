@@ -2,7 +2,7 @@ Name: hello
 Version: 1.0
 Release: 1%{?dist}
 Summary: A sample package, saying hello, world
-License: GPL
+License: Apache 2.0
 Prefix: /usr
 Source0: hello-1.0.tar.gz
 BuildRoot: %{_tmppath}/hello-root
@@ -19,7 +19,7 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT/usr/local/ {bin,lib}
+mkdir -p $RPM_BUILD_ROOT/usr/local/{bin,lib}
 make install
 
 
